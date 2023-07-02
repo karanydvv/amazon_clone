@@ -18,18 +18,18 @@ const Carousel = () => {
         className="h-[50%]"
       >
         <SwiperSlide>
-          <img src={"https://images-eu.ssl-images-amazon.com/images/G/31/img23/Fashion/GW/Jun/Unrec-PFF-3000-1200._CB603212230_.jpg"} alt="Carousel POR" />
+          <img src={"https://images-eu.ssl-images-amazon.com/images/G/31/prime/PD23/ACQ/hero/v2/PC_Hero_3000x1200_2X_EN._CB600991698_.jpg"} />
         </SwiperSlide>
         <SwiperSlide>
           <img src={"https://images-eu.ssl-images-amazon.com/images/G/31/img21/Wireless/Shreyansh/BAU/Unrexc/D70978891_INWLD_BAU_Unrec_Uber_PC_Hero_3000x1200._CB594707876_.jpg"} alt="Carousel POR" />
         </SwiperSlide>
         <SwiperSlide className="bg-black">
-          <video controls muted="muted">
+          <video controls autoPlay loop muted="muted">
             <source src={"../images/carousel_vid.mp4"} type="video/mp4" />
           </video>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={"https://images-eu.ssl-images-amazon.com/images/G/31/img23/Beauty/GW/ATF/revised/new/Skincare-Herofader-PC._CB594538667_.jpg"} alt="Carousel POR" />
+          <img src={"https://images-eu.ssl-images-amazon.com/images/G/31/img23/PCA/GW/MFD_GW_PC-1X._CB602607458_.jpg"} alt="Carousel POR" />
         </SwiperSlide>
         <SwiperSlide>
           <img src={"../images/carousel_5.jpg"} alt="Carousel POR" />
