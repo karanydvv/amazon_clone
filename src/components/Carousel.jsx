@@ -1,70 +1,43 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
-import { useNavigate, createSearchParams } from "react-router-dom";
+import { Navigation, Autoplay } from "swiper";
 
 import "swiper/css";
 import "swiper/css/navigation";
 
-const CarouselCategory = () => {
-  const navigate = useNavigate();
-  const searchCategory = (category) => {
-    navigate({
-      pathname: "search",
-      search: `${createSearchParams({
-        category: `${category}`,
-        searchTerm: ``,
-      })}`,
-    });
-  };
-
+const Carousel = () => {
   return (
-    <div className="bg-white m-3  -mt-80 z-30">
-      <div className="text-2xl font-semibold p-3 bg-color-red mt-3 ">Shop by Category</div>
+    <div className="h-[600px] bg-white">
       <Swiper
-        slidesPerView={5}
-        spaceBetween={10}
+        loop={true}
+        spaceBetween={0}
         navigation={true}
-        modules={[Navigation]}
+        modules={[Navigation, Autoplay]}
+        autoplay={{
+          delay: 4500,
+        }}
+        className="h-[50%]"
       >
-        <SwiperSlide
-          onClick={() => searchCategory("Deals")}
-          className="cursor-pointer"
-        >
-          <img src={"../images/category_0.jpg"} alt="Deal category" />
+        <SwiperSlide>
+          <img src={"https://images-eu.ssl-images-amazon.com/images/G/31/prime/PD23/ACQ/hero/v2/PC_Hero_3000x1200_2X_EN._CB600991698_.jpg"} />
         </SwiperSlide>
-        <SwiperSlide
-          onClick={() => searchCategory("Amazon")}
-          className="cursor-pointer"
-        >
-          <img src={"../images/category_1.jpg"} alt="Amazon category" />
+        <SwiperSlide>
+          <img src={"https://images-eu.ssl-images-amazon.com/images/G/31/img21/Wireless/Shreyansh/BAU/Unrexc/D70978891_INWLD_BAU_Unrec_Uber_PC_Hero_3000x1200._CB594707876_.jpg"} alt="Carousel POR" />
         </SwiperSlide>
-        <SwiperSlide
-          onClick={() => searchCategory("Fashion")}
-          className="cursor-pointer"
-        >
-          <img src={"../images/category_2.jpg"} alt="Fashion category" />
+        <SwiperSlide className="bg-black">
+          <video controls autoPlay loop muted="muted">
+            <source src={"../images/carousel_vid.mp4"} type="video/mp4" />
+          </video>
         </SwiperSlide>
-        <SwiperSlide
-          onClick={() => searchCategory("Computers")}
-          className="cursor-pointer"
-        >
-          <img src={"../images/category_3.jpg"} alt="Computers category" />
+        <SwiperSlide>
+          <img src={"https://images-eu.ssl-images-amazon.com/images/G/31/img23/PCA/GW/MFD_GW_PC-1X._CB602607458_.jpg"} alt="Carousel POR" />
         </SwiperSlide>
-        <SwiperSlide
-          onClick={() => searchCategory("Home")}
-          className="cursor-pointer"
-        >
-          <img src={"../images/category_4.jpg"} alt="Home category" />
-        </SwiperSlide>
-        <SwiperSlide
-          onClick={() => searchCategory("Mobiles")}
-          className="cursor-pointer"
-        >
-          <img src={"../images/category_5.jpg"} alt="Mobiles category" />
+        <SwiperSlide>
+          <img src={"../images/carousel_5.jpg"} alt="Carousel POR" />
         </SwiperSlide>
       </Swiper>
+      <div className="h-[50%] bg-gradient-to-b from-stone-900" />
     </div>
   );
 };
 
-export default CarouselCategory;
+export default Carousel;
