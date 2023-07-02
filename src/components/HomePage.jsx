@@ -2,49 +2,56 @@ import { Carousel, HomePageCard, CarouselCategory, CarouselProduct } from "./";
 
 const HomePage = () => {
   return (
+    
     <div className="bg-amazonclone-background">
-      <div className="min-w-[1000px] max-w-[1500px] m-auto">
+      <div className="min-w-[500px] max-w-[1500px] m-auto">
+      
         <Carousel />
-        <div className="grid grid-cols-3 xl:grid-cols-4 -mt-80">
+        <CarouselCategory/>
+        <CarouselProduct/>
+
+        <div className=" grid grid-cols-3 xl:grid-cols-4 mt-3  mb-0 ]">
+        
           <HomePageCard
             title={"We have a surprise for you"}
             img={"../images/home_grid_1.jpg"}
-            link={"See terms and conditions"}
+            link={"/product/13"}
+           
           />
           <HomePageCard
-            title={"Marvel's Wastelanders: Star-Lord, on Audible"}
-            img={"https://images-eu.ssl-images-amazon.com/images/G/31/AudibleIN/Amazon_Marvel_379x304_under50kb._SY304_CB602679911_.jpg"}
-            link={"see more"}
+            title={"Watch Rings of Power"}
+            img={"../images/home_grid_2.jpg"}
+            link={"https://www.amazon.com/Lord-Rings-Power-Season/dp/B09QH98YG1"}
           />
           <HomePageCard
             title={"Unlimited Streaming"}
             img={"../images/home_grid_3.jpg"}
-            link={"Find out more"}
+            link={"https://www.amazon.in/gp/prime?tag=msndeskstdin-21&ref=pd_sl_1bjx4njws8_e&adgrpid=1326012630099436&hvadid=82876047486695&hvnetw=o&hvqmt=e&hvbmt=be&hvdev=c&hvlocint=&hvlocphy=150034&hvtargid=kwd-82876677293671:loc-90&hydadcr=15720_2210656"}
           />
           <HomePageCard
             title={"More titles to explore"}
             img={"../images/home_grid_4.jpg"}
-            link={"Browse Kindle Unlimited"}
+            link={"/search?category=Deals&searchTerm="}
           />
           <HomePageCard
-            title={"Shop Pet Supplies"}
-            img={"../images/home_grid_5.jpg"}
-            link={"See more"}
+            title={"DeLonghi Nescafé Dolce Coffee Machine"}
+            img={"https://m.media-amazon.com/images/I/71zI-ry-gXL._AC_SX569_.jpg"}
+            link={"product/12"}
           />
           <HomePageCard
-            title={"Spring Sale"}
-            img={"../images/home_grid_6.jpg"}
-            link={"See the deals"}
+            title={"Fire TV Stick Lite"}
+            img={"https://m.media-amazon.com/images/I/51lQwjYsgBL._AC_UY327_FMwebp_QL65_.jpg"}
+            link={"product/9"}
           />
           <HomePageCard
-            title={"Echo Buds"}
-            img={"../images/home_grid_7.jpg"}
-            link={"See more"}
+            title={"SPACEBOY"}
+            img={ "https://th.bing.com/th/id/OIP.0ofRhqCrTADpLC2M1fOFPgAAAA?pid=ImgDet&w=207&h=218&c=7&dpr=1.3"}
+            link={"product/6"}
           />
           <HomePageCard
-            title={"Family Plan: 3 months free"}
-            img={"../images/home_grid_8.jpg"}
-            link={"Learn more"}
+            title={"Guinness World Records 2023"}
+            img={"https://i.thenile.io/r1000/9781913484071.jpg?r=5f80ef0b51785"}
+            link={"product/1"}
           />
           <div className="m-3 pt-8">
             <img
@@ -53,9 +60,12 @@ const HomePage = () => {
               alt="Banner 2"
             />
           </div>
+          
         </div>
-        <CarouselProduct />
-        <CarouselCategory />
+
+        
+        
+       
         <div className="h-[200px]">
           <img
             className="h-[100%] m-auto"
