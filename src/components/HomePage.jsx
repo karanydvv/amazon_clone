@@ -4,7 +4,7 @@ const HomePage = () => {
   return (
     
     <div className="bg-amazonclone-background">
-      <div className="min-w-[500px] max-w-[1500px] m-auto">
+      <div className="min-w-[480px] max-w-[1500px] m-auto">
       
         <Carousel />
         <CarouselCategory/>
